@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+        "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="example" namespace="/example" extends="struts-default">
+        <action name="HelloWorld" class="example.HelloWorld">
+            <result>/example/HelloWorld.jsp</result>
+        </action>
+        <action name="login">
+            <result>/example/login.jsp</result>
+        </action>
+        <action name="doLogin" class="example.login">
+            <result name="input">/example/login.jsp</result>
+            <result>/example/Dashboard.jsp</result>
+        </action>
+        <action name="registration">
+            <result>/example/registration.jsp</result>
+        </action>
+        <action name="doRegistration" class="example.registration">
+            <result name="input">/example/registration.jsp</result>
+            <result>/example/Dashboard.jsp</result>
+        </action>
+        <action name="delete">
+            <result>/example/Dashboard.jsp</result>
+        </action>
+        <action name="delete" class="example.delete">
+            <result name="input">/example/Dashboard.jsp</result>
+            <result>/example/Dashboard.jsp</result>
+        </action>
+    </package>
+</struts>
+
